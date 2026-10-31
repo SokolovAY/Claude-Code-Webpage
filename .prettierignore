@@ -1,0 +1,16 @@
+.next/
+out/
+build/
+node_modules/
+package-lock.json
+next-env.d.ts
+playwright-report/
+test-results/
+.playwright/
+.playwright-cli/
+.agents/
+.claude/
+docs/
+CLAUDE.md
+AGENTS.md
+skills-lock.json

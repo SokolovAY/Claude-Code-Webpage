@@ -1,16 +1,20 @@
 # dependencies
-node_modules/
+/node_modules
+/.pnp
+.pnp.*
 
 # next.js
-.next/
-out/
+/.next/
+/out/
+/build
 next-env.d.ts
 
-# env
-.env*.local
-.env
+# env (only the example is committed)
+.env*
+!.env.example
 
 # testing
+/coverage
 playwright-report/
 test-results/
 blob-report/
@@ -20,8 +24,10 @@ playwright/.cache/
 .playwright/
 .playwright-cli/
 .claude/settings.local.json
+.vercel
 
 # misc
 .DS_Store
+*.pem
 *.log
 *.tsbuildinfo
