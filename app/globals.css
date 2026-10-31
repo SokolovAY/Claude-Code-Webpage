@@ -1,3 +1,115 @@
 @import "tailwindcss";
 
-/* Design tokens (CLAUDE.md section 7.2) are added in M1. */
+/*
+ * Design tokens (CLAUDE.md section 7.2).
+ * Every @theme variable is also emitted as a CSS custom property on :root.
+ * Default palettes, radii and shadows are reset so only these tokens exist.
+ */
+@theme {
+  --color-*: initial;
+  --color-paper: #fbf7ef;
+  --color-paper-deep: #f3ecdd;
+  --color-ink: #1e1b18;
+  --color-ink-muted: #5a534b;
+  --color-highlight: #ffe066;
+  --color-sticker-mint: #bde8d4;
+  --color-sticker-pink: #f9c6d0;
+  --color-sticker-sky: #c4ddf7;
+  --color-term-bg: #1d1f21;
+  --color-term-text: #e6e1d6;
+  --color-term-comment: #8fbf8f;
+  --color-term-accent: #f0c674;
+  --color-focus: #2f6feb;
+  --color-error: #b42318;
+  --color-success: #1f7a4d;
+
+  --text-*: initial;
+  --text-xs: 0.75rem;
+  --text-xs--line-height: 1.5;
+  --text-sm: 0.875rem;
+  --text-sm--line-height: 1.5;
+  --text-base: 1rem;
+  --text-base--line-height: 1.6;
+  --text-lg: 1.125rem;
+  --text-lg--line-height: 1.6;
+  --text-xl: 1.25rem;
+  --text-xl--line-height: 1.5;
+  --text-2xl: 1.5rem;
+  --text-2xl--line-height: 1.35;
+  --text-3xl: 1.875rem;
+  --text-3xl--line-height: 1.25;
+  --text-4xl: 2.25rem;
+  --text-4xl--line-height: 1.2;
+  --text-5xl: 3rem;
+  --text-5xl--line-height: 1.1;
+
+  --radius-*: initial;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 9999px;
+
+  --shadow-*: initial;
+  --shadow-sticker: 2px 3px 0 rgba(30, 27, 24, 0.15);
+
+  --motion-fast: 150ms;
+  --motion-base: 250ms;
+}
+
+/* Fonts come from next/font variables set on <html> in app/layout.tsx. */
+@theme inline {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-hand: var(--font-caveat), cursive;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
+}
+
+/* Tilt for tags and tiles only, never body text. */
+@utility rotate-sticker-l {
+  rotate: -2deg;
+}
+
+@utility rotate-sticker-r {
+  rotate: 1.5deg;
+}
+
+@utility duration-fast {
+  transition-duration: var(--motion-fast);
+}
+
+@utility duration-base {
+  transition-duration: var(--motion-base);
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: var(--text-base);
+    line-height: var(--text-base--line-height);
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--color-focus);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      transition-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+    }
+  }
+}

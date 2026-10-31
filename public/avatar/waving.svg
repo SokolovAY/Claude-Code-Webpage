@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240">
+  <!-- PLACEHOLDER: replaced by the real illustrated avatar. -->
+  <circle cx="120" cy="120" r="116" fill="#F3ECDD" stroke="#1E1B18" stroke-width="4"/>
+  <path d="M52 228c6-40 34-62 68-62s62 22 68 62" fill="#C4DDF7" stroke="#1E1B18" stroke-width="4" stroke-linejoin="round"/>
+  <circle cx="120" cy="104" r="44" fill="#FBF7EF" stroke="#1E1B18" stroke-width="4"/>
+  <path d="M78 92c4-26 24-38 44-38s38 12 42 34c-14-10-30-12-44-8s-28 8-42 12z" fill="#1E1B18"/>
+  <rect x="94" y="98" width="20" height="14" rx="5" fill="none" stroke="#1E1B18" stroke-width="3"/>
+  <rect x="126" y="98" width="20" height="14" rx="5" fill="none" stroke="#1E1B18" stroke-width="3"/>
+  <path d="M114 104h12" stroke="#1E1B18" stroke-width="3"/>
+  <path d="M104 128c8 8 24 8 32 0" fill="none" stroke="#1E1B18" stroke-width="3" stroke-linecap="round"/>
+  <path d="M182 186c10-24 16-48 18-70" fill="none" stroke="#1E1B18" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="201" cy="106" r="12" fill="#FBF7EF" stroke="#1E1B18" stroke-width="4"/>
+  <path d="M214 84l10-8M220 100l12-2M196 80l2-12" stroke="#1E1B18" stroke-width="3" stroke-linecap="round"/>
+</svg>

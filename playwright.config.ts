@@ -48,6 +48,8 @@ export default defineConfig({
       PAYMENT_PROVIDER: "mock",
       SIGNUP_PROVIDER: "stub",
       NEXT_PUBLIC_GA_ID: "G-TEST",
+      // The production build hides /design unless this is set; a11y and visual specs need it.
+      ENABLE_DESIGN_PAGE: "true",
     },
   },
 });
